@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="D:\androidStudio\securhat.com\app\src\main\assets" >
+            <file
+                name="www/css/bootstrap.min.css"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\css\bootstrap.min.css" />
+            <file
+                name="www/css/securhat.css"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\css\securhat.css" />
+            <file
+                name="www/fonts/glyphicons-halflings-regular.eot"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\fonts\glyphicons-halflings-regular.eot" />
+            <file
+                name="www/fonts/glyphicons-halflings-regular.svg"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\fonts\glyphicons-halflings-regular.svg" />
+            <file
+                name="www/fonts/glyphicons-halflings-regular.ttf"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\fonts\glyphicons-halflings-regular.ttf" />
+            <file
+                name="www/fonts/glyphicons-halflings-regular.woff"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\fonts\glyphicons-halflings-regular.woff" />
+            <file
+                name="www/img/favicon.ico"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\img\favicon.ico" />
+            <file
+                name="www/img/no-image.png"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\img\no-image.png" />
+            <file
+                name="www/img/profile-white.png"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\img\profile-white.png" />
+            <file
+                name="www/img/profile.png"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\img\profile.png" />
+            <file
+                name="www/index.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\index.html" />
+            <file
+                name="www/index2.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\index2.html" />
+            <file
+                name="www/js/bootstrap.min.js"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\js\bootstrap.min.js" />
+            <file
+                name="www/js/content.js"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\js\content.js" />
+            <file
+                name="www/js/jq.js"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\js\jq.js" />
+            <file
+                name="www/js/script.js"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\js\script.js" />
+            <file
+                name="www/module/profile/profile.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\profile\profile.html" />
+            <file
+                name="www/module/stream/jsonp.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\stream\jsonp.html" />
+            <file
+                name="www/module/stream/stream.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\stream\stream.html" />
+            <file
+                name="www/module/welcome/welcome.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\welcome\welcome.html" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="D:\androidStudio\securhat.com\app\src\debug\assets" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,66 @@
+<script>
+	$(function(){
+		$.ajax({
+			crossDomain: true,
+			url:"http://securhat.com/api/v1/stream/list.js",
+			type:"POST",
+			data:{
+				rowStart: 0,
+				rowCount: 100
+			},
+			dataType: "jsonp",
+			success: function(data) {
+				myStr = "";
+				row = data.data.row;
+				no = 0;
+				i = 0;
+				$.each(row, function (id, val) {
+					if(i%3==0){
+						no++;
+					}
+					i++;
+					delayedTrigger(val, 500*no);
+				});
+			}
+		})
+	})
+	function delayedTrigger(val, delay){
+   		setTimeout(function(){parseResult(val);},delay);
+	}
+	function parseResult(result){
+		html=' \
+			<div class="item curhat" data-curhat-id="'+result["id_sch_tc_stream"]+'"> \
+				<div> \
+					<div class="item-absolute"><div class="item-img" style="background-image:url('+result["img"]+')"></div></div> \
+					<div class="item-detail"> \
+						<div class="item-name"> \
+							<span class="item-full-name"><a href="'+result["url"]+'">'+result["name"]+'</a></span> \
+							<span class="item-date" title="'+result["date"]+'">&middot; '+result["timeAgo"]+'</span> \
+						</div> \
+						<div class="item-descr">'+result["description"]+'</div> \
+						<div class="item-action"> \
+							<div class="btn-group"> \
+								<button class="btn btn-custom" data-toggle="tooltip" data-placement="top" title="Like"> \
+									<span class="glyphicon glyphicon-heart"></span> \
+									<span class="item-comment hide-md hidden-lg">Like</span> \
+								</button> \
+								<button class="btn btn-custom comment-tg" data-curhat-id="<?= $curhatId ?>" data-toggle="tooltip" data-placement="top" title="Comment"> \
+									<span class="glyphicon glyphicon-comment"></span> \
+									<?= $totalComment ?> \
+									<span class="item-comment hide-md hidden-lg">Comment</span> \
+								</button> \
+								<button class="btn btn-custom" data-toggle="tooltip" data-placement="top" title="Share"> \
+									<span class="glyphicon glyphicon-retweet"></span> \
+									<span class="item-comment hidden-md hidden-lg">Share</span> \
+								</button> \
+							</div> \
+						</div> \
+					</div> \
+				</div> \
+				<div class="clearfix"></div> \
+			</div> \
+		';
+		$(".curhat-container.friend").append(html);
+	}
+</script>
+<div class="curhat-container friend"></div>

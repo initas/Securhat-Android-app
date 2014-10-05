@@ -97,12 +97,17 @@ public class MainActivity extends FragmentActivity {
             return true;
         }
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.action_search:
+                StreamFragment.search();
+                return true;
+            case R.id.action_refresh:
+                StreamFragment.loadStream();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);

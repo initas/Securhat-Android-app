@@ -49,11 +49,6 @@
                 qualifiers=""
                 type="menu" />
             <file
-                name="main_activity_actions"
-                path="D:\androidStudio\securhat.com\app\src\main\res\menu\main_activity_actions.xml"
-                qualifiers=""
-                type="menu" />
-            <file
                 path="D:\androidStudio\securhat.com\app\src\main\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
@@ -97,10 +92,14 @@
                 </style>
 
                 <style
-                    name="AppTheme"
-                    parent="AppBaseTheme" >
-
-                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                    name="MyActionBar"
+                    parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" >
+                    <item name="android:background">
+@color/peach
+                    </item>
+                    <item name="android:titleTextStyle">
+@style/ActbarTitle
+                    </item>
                 </style>
 
                 <style
@@ -112,14 +111,10 @@
                 </style>
 
                 <style
-                    name="MyActionBar"
-                    parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" >
-                    <item name="android:background">
-@color/peach
-                    </item>
-                    <item name="android:titleTextStyle">
-@style/ActbarTitle
-                    </item>
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
                 </style>
             </file>
             <file
@@ -148,6 +143,8 @@ What\'s Hot
 
                 <string name="action_settings" >Settings
                 </string>
+                <string name="app_name" >LocalHtml
+                </string>
 
                 <array name="nav_drawer_icons" >
                     <item>
@@ -170,13 +167,11 @@ What\'s Hot
                     </item>
                 </array>
 
-                <string name="app_name" >LocalHtml
-                </string>
                 <string name="desc_list_item_icon" >Item Icon
                 </string>
-                <string name="drawer_open" >Slider Menu Opened
-                </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="drawer_open" >Slider Menu Opened
                 </string>
                 <string name="drawer_close" >Slider Menu Closed
                 </string>
@@ -232,13 +227,13 @@ What\'s Hot
             <file
                 path="D:\androidStudio\securhat.com\app\src\main\res\values\color.xml"
                 qualifiers="" >
-                <color name="counter_text_bg" >#626262
-                </color>
                 <color name="list_background_pressed" >#992416
                 </color>
-                <color name="list_background" >#303030
+                <color name="counter_text_bg" >#626262
                 </color>
                 <color name="list_item_title" >#fff
+                </color>
+                <color name="list_background" >#303030
                 </color>
                 <color name="list_divider" >#272727
                 </color>

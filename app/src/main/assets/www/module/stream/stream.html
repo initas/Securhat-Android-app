@@ -10,22 +10,26 @@
 			},
 			dataType: "jsonp",
 			success: function(data) {
-				myStr = "";
-				row = data.data.row;
-				no = 0;
-				i = 0;
-				$.each(row, function (id, val) {
-					if(i%3==0){
-						no++;
-					}
-					i++;
-					delayedTrigger(val, 500*no);
-				});
+				getCurhat(data);
 			}
 		})
 	})
 	function delayedTrigger(val, delay){
    		setTimeout(function(){parseResult(val);},delay);
+	}
+	function getCurhat(data){
+		$(".curhat-container.friend").html("");
+		myStr = "";
+		row = data.data.row;
+		no = 0;
+		i = 0;
+		$.each(row, function (id, val) {
+			if(i%3==0){
+				no++;
+			}
+			i++;
+			delayedTrigger(val, 500*no);
+		});
 	}
 	function parseResult(result){
 		html=' \
@@ -63,4 +67,4 @@
 		$(".curhat-container.friend").append(html);
 	}
 </script>
-<div class="curhat-container friend"></div>
+<div class="curhat-container friend"><img src="img/loading.gif"></div>

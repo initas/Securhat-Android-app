@@ -63,6 +63,9 @@
             <file
                 name="www/module/welcome/welcome.html"
                 path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\welcome\welcome.html" />
+            <file
+                name="www/img/loading.gif"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\img\loading.gif" />
         </source>
     </dataSet>
     <dataSet config="debug" >

@@ -1,5 +1,45 @@
+<style>
+	/*blinker*/
+	.blink_me{
+		-webkit-animation-name: blinker;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		
+		-moz-animation-name: blinker;
+		-moz-animation-duration: 2s;
+		-moz-animation-timing-function: linear;
+		-moz-animation-iteration-count: infinite;
+		
+		animation-name: blinker;
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	
+	@-moz-keyframes blinker {  
+		0% { opacity: 1.0; }
+		50% { opacity: 0.5; }
+		100% { opacity: 1.0; }
+	}
+	
+	@-webkit-keyframes blinker {  
+		0% { opacity: 1.0; }
+		50% { opacity: 0.5; }
+		100% { opacity: 1.0; }
+	}
+	
+	@keyframes blinker {  
+		0% { opacity: 1.0; }
+		50% { opacity: 0.5; }
+		100% { opacity: 1.0; }
+	}
+</style>
 <script>
+	curhatContainer = $(".curhat-container.friend");
+	curhatSample = $(".curhat-sample");
 	$(function(){
+		init();
 		$.ajax({
 			crossDomain: true,
 			url:"http://securhat.com/api/v1/stream/list.js",
@@ -9,16 +49,35 @@
 				rowCount: 100
 			},
 			dataType: "jsonp",
-			success: function(data) {
+			success: function(data){
 				getCurhat(data);
 			}
 		})
 	})
+	function init(){
+		bull = "&bull;&bull;&bull;&bull;&bull;";
+		moreBull =  bull+" "+bull+" "+bull+" "+bull+" "+bull;
+		val = {
+			"id_sch_tc_stream" : "sample",
+			"img" : bull,
+			"name" : bull,
+			"timeAgo" : bull,
+			"description" : moreBull+moreBull+moreBull+moreBull+moreBull+moreBull
+		}
+		parseResult(val);
+		parseResult(val);
+		parseResult(val);
+		curhatContainer.addClass("blink_me");
+	}
 	function delayedTrigger(val, delay){
    		setTimeout(function(){parseResult(val);},delay);
 	}
 	function getCurhat(data){
-		$(".curhat-container.friend").html("");
+		setTimeout(function(){
+			$(".curhat-sample").remove();
+			curhatContainer.removeClass("blink_me");
+		},500);
+		
 		myStr = "";
 		row = data.data.row;
 		no = 0;
@@ -32,16 +91,21 @@
 		});
 	}
 	function parseResult(result){
+		id = result["id_sch_tc_stream"];
+		img = result["img"];
+		name = result["name"];
+		timeAgo = result["timeAgo"];
+		description = result["description"];
 		html=' \
-			<div class="item curhat" data-curhat-id="'+result["id_sch_tc_stream"]+'"> \
+			<div class="item curhat curhat-'+id+'" data-curhat-id="'+id+'"> \
 				<div> \
-					<div class="item-absolute"><div class="item-img" style="background-image:url('+result["img"]+')"></div></div> \
+					<div class="item-absolute"><div class="item-img" style="background-image:url('+img+')"></div></div> \
 					<div class="item-detail"> \
 						<div class="item-name"> \
-							<span class="item-full-name"><a href="'+result["url"]+'">'+result["name"]+'</a></span> \
-							<span class="item-date" title="'+result["date"]+'">&middot; '+result["timeAgo"]+'</span> \
+							<span class="item-full-name"><a href="'+result["url"]+'">'+name+'</a></span> \
+							<span class="item-date" title="'+result["date"]+'">&middot; '+timeAgo+'</span> \
 						</div> \
-						<div class="item-descr">'+result["description"]+'</div> \
+						<div class="item-descr">'+description+'</div> \
 						<div class="item-action"> \
 							<div class="btn-group"> \
 								<button class="btn btn-custom" data-toggle="tooltip" data-placement="top" title="Like"> \
@@ -64,7 +128,7 @@
 				<div class="clearfix"></div> \
 			</div> \
 		';
-		$(".curhat-container.friend").append(html);
+		curhatContainer.append(html);
 	}
 </script>
-<div class="curhat-container friend"><img src="img/loading.gif"></div>
+<div class="curhat-container friend"></div>

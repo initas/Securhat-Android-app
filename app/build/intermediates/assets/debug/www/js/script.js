@@ -1,5 +1,5 @@
 $(function(){
-    showAndroidToast('Called from JS');
+    //showAndroidToast('Called from JS');
 })
 function $_GET(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -7,7 +7,9 @@ function $_GET(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 function showAndroidToast(toast){
-    Android.showToast(toast);
+    if(typeof Android != 'undefined'){
+        Android.showToast(toast);
+    }
 }
 function lalala(){
     alert("Called From Android");

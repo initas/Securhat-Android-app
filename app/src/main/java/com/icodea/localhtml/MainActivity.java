@@ -103,6 +103,9 @@ public class MainActivity extends FragmentActivity {
             case R.id.action_refresh:
                 StreamFragment.loadStream();
                 return true;
+            case R.id.action_new:
+                StreamFragment.loadStreamForm();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -121,6 +124,7 @@ public class MainActivity extends FragmentActivity {
                 fragment = new StreamFragment();
                 break;
             case 1:
+                fragment = new StreamFormFragment();
                 break;
             case 2:
                 break;
@@ -184,4 +188,5 @@ public class MainActivity extends FragmentActivity {
 class Constants{
     public static final String BASE_URL = "file:///android_asset/www/";
     public static final String CURHAT_PAGE = BASE_URL+"index.html?module=stream";
+    public static final String CURHAT_FORM_PAGE = BASE_URL+"index.html?module=stream&subModule=stream-form";
 }

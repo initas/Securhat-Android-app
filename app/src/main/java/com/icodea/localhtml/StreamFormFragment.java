@@ -12,7 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.app.Fragment;
 
-public class StreamFragment extends Fragment {
+public class StreamFormFragment extends Fragment {
 
     static WebView webView;
     WebSettings webSettings;
@@ -52,13 +52,8 @@ public class StreamFragment extends Fragment {
                 webView.loadUrl("file:///android_asset/my-error-page.html");
             }
         });
-        loadStream();
+        loadStreamForm();
         return rootView;
-    }
-    public static void loadStream(){
-        webView.clearCache(true);
-        webView.loadUrl(Constants.CURHAT_PAGE);
-        webView.setBackgroundColor(0);
     }
     public static void loadStreamForm(){
         webView.clearCache(true);

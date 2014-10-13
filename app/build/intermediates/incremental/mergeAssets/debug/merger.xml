@@ -55,9 +55,6 @@
                 name="www/module/profile/profile.html"
                 path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\profile\profile.html" />
             <file
-                name="www/module/stream/jsonp.html"
-                path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\stream\jsonp.html" />
-            <file
                 name="www/module/stream/stream.html"
                 path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\stream\stream.html" />
             <file
@@ -66,6 +63,9 @@
             <file
                 name="www/img/loading.gif"
                 path="D:\androidStudio\securhat.com\app\src\main\assets\www\img\loading.gif" />
+            <file
+                name="www/module/stream/stream-form.html"
+                path="D:\androidStudio\securhat.com\app\src\main\assets\www\module\stream\stream-form.html" />
         </source>
     </dataSet>
     <dataSet config="debug" >

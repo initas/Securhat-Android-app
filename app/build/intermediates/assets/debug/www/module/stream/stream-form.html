@@ -1,0 +1,52 @@
+<style>
+	body{
+	}
+	.no-border{
+		border:none;
+	}
+	.label-container{
+		background:#fff;
+		padding:15px;
+		padding-bottom:0px;
+	}
+	.textarea-container{
+		background:#fff;
+		box-sizing:border-box;
+	}
+	.textarea-container textarea{
+		height: 100%;
+		width: 100%;
+	   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;
+		padding:0px 15px;
+		resize:none;
+	}
+	.submit-container{
+		background:rgba(255,255,255,0.8);
+		padding:15px;
+	}
+</style>
+<script>
+	$(function(){
+		windowHeight = $(window).height();
+		labelContainerHeight = $(".label-container").height()+15;
+		submitContainerHeight = $(".submit-container").height()+30;
+		$(".textarea-container").height(windowHeight-labelContainerHeight-submitContainerHeight);
+	})
+</script>
+<div class="curhat-form" id="curhat-form">
+	<form action="<?= $system ?>/api/module/member/post-member.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="act" value="update">
+		<input type="hidden" name="id" value="<?= $userId ?>">
+		<div class="label-container">
+			<label for="username" class="control-label">Curahan Hati</label>
+		</div>
+		<div class="textarea-container">
+			<textarea class="no-border" placeholder="Compose New Curhat"></textarea>
+		</div>
+		<div class="submit-container">
+			<input type="submit" class="btn-block btn-custom btn" value="Submit">
+		</div>
+	</form>
+</div>

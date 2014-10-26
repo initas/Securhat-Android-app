@@ -1,11 +1,23 @@
 $(function(){
     //showAndroidToast('Called from JS');
 })
-function $_GET(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
+
+//function with Timeout
+setTimeout = (function( oldsetInterval){
+	var registered=[],
+	f = function(a,b){
+		return registered[ registered.length ] = oldsetInterval(a,b)
+	};
+	f.clearAll = function(){
+		var r;
+		while( r = registered.pop()) { 
+			clearTimeout(r);
+		}       
+	};
+	return f;    
+})(window.setTimeout);
+
+//etc
 function showAndroidToast(toast){
     if(typeof Android != 'undefined'){
         Android.showToast(toast);

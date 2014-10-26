@@ -17,6 +17,7 @@ public class StreamFragment extends Fragment {
     static WebView webView;
     WebSettings webSettings;
     ProgressBar progress;
+    static String javascript="javascript:";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,18 +53,17 @@ public class StreamFragment extends Fragment {
                 webView.loadUrl("file:///android_asset/my-error-page.html");
             }
         });
+        webView.clearCache(true);
+        webView.loadUrl(Constants.CURHAT_PAGE);
+        webView.setBackgroundColor(0);
         loadStream();
         return rootView;
     }
     public static void loadStream(){
-        webView.clearCache(true);
-        webView.loadUrl(Constants.CURHAT_PAGE);
-        webView.setBackgroundColor(0);
+        webView.loadUrl(javascript+"loadUrl('stream')");
     }
     public static void loadStreamForm(){
-        webView.clearCache(true);
-        webView.loadUrl(Constants.CURHAT_FORM_PAGE);
-        webView.setBackgroundColor(0);
+        webView.loadUrl(javascript+"loadUrl('stream', 'stream-form')");
     }
     public static boolean canGoBack(){
         return webView.canGoBack();
@@ -72,7 +72,6 @@ public class StreamFragment extends Fragment {
         webView.goBack();
     }
     public static void search(){
-        String javascript="javascript: lalala()";
-        webView.loadUrl(javascript);
+        webView.loadUrl(javascript+"lalala()");
     }
 }

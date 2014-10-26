@@ -45,6 +45,8 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*--- Nav Drawer ---*/
         mTitle = mDrawerTitle = getTitle();
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
         navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
@@ -74,9 +76,10 @@ public class MainActivity extends FragmentActivity {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-        if (savedInstanceState == null) {
-            displayView(0);
-        }
+
+        /*--- Load Fragment ---*/
+        Fragment fragment = new StreamFragment();
+        loadFragment(fragment);
     }
 
     /*Nav Drawer*/
@@ -118,15 +121,15 @@ public class MainActivity extends FragmentActivity {
         return super.onPrepareOptionsMenu(menu);
     }
     private void displayView(int position) {
-        Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new StreamFragment();
+                StreamFragment.loadStream();
                 break;
             case 1:
-                fragment = new StreamFormFragment();
+                StreamFragment.loadStreamForm();
                 break;
             case 2:
+                StreamFragment.search();
                 break;
             case 3:
                 break;
@@ -138,16 +141,10 @@ public class MainActivity extends FragmentActivity {
             default:
                 break;
         }
-        if (fragment != null) {
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
-            mDrawerList.setItemChecked(position, true);
-            mDrawerList.setSelection(position);
-            setTitle(navMenuTitles[position]);
-            mDrawerLayout.closeDrawer(mDrawerList);
-        } else {
-            Log.e("MainActivity", "Error in creating fragment");
-        }
+        mDrawerList.setItemChecked(position, true);
+        mDrawerList.setSelection(position);
+        setTitle(navMenuTitles[position]);
+        mDrawerLayout.closeDrawer(mDrawerList);
     }
     @Override
     public void setTitle(CharSequence title) {
@@ -165,7 +162,17 @@ public class MainActivity extends FragmentActivity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-    /*Back Button*/
+    /*--- Load Fragment ---*/
+    public void loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+        } else {
+            Log.e("MainActivity", "Error in creating fragment");
+        }
+    }
+
+    /*--- Back Button ---*/
     @Override
     public void onBackPressed() {
         if(StreamFragment.canGoBack()){
@@ -184,9 +191,4 @@ public class MainActivity extends FragmentActivity {
             }, 2000);
         }
     }
-}
-class Constants{
-    public static final String BASE_URL = "file:///android_asset/www/";
-    public static final String CURHAT_PAGE = BASE_URL+"index.html?module=stream";
-    public static final String CURHAT_FORM_PAGE = BASE_URL+"index.html?module=stream&subModule=stream-form";
 }

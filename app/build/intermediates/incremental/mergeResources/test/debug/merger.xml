@@ -2,9 +2,9 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="D:\androidStudio\securhat.com\app\src\androidTest\res" />
-        <source path="D:\androidStudio\securhat.com\app\build\generated\res\rs\test\debug" />
-        <source path="D:\androidStudio\securhat.com\app\build\generated\res\generated\test\debug" />
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/androidTest/res" />
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/build/generated/res/rs/test/debug" />
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/build/generated/res/generated/test/debug" />
     </dataSet>
 
 </merger>

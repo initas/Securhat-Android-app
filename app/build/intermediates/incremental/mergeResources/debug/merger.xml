@@ -2,54 +2,130 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="D:\androidStudio\securhat.com\app\src\main\res" >
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res" >
+            <file
+                name="counter_bg"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable/counter_bg.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_item_bg_normal"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable/list_item_bg_normal.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_item_bg_pressed"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable/list_item_bg_pressed.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_selector"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable/list_selector.xml"
+                qualifiers=""
+                type="drawable" />
             <file
                 name="bg"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-hdpi\bg.png"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-hdpi/bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_refresh"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-hdpi/ic_action_refresh.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-hdpi/ic_drawer.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-hdpi/ic_home.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-hdpi\ic_launcher.png"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="securhat"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-hdpi\securhat.png"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-hdpi/securhat.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="ic_action_refresh"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-mdpi/ic_action_refresh.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_action_search"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-mdpi\ic_action_search.png"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-mdpi/ic_action_search.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-mdpi\ic_launcher.png"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
-                name="ic_launcher"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-xhdpi\ic_launcher.png"
+                name="ic_action_refresh"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-xhdpi/ic_action_refresh.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="D:\androidStudio\securhat.com\app\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_refresh"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-xxhdpi/ic_action_refresh.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="activity_main"
-                path="D:\androidStudio\securhat.com\app\src\main\res\layout\activity_main.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_list_item"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/layout/drawer_list_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_stream"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/layout/fragment_stream.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="main"
-                path="D:\androidStudio\securhat.com\app\src\main\res\menu\main.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/menu/main.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values\dimens.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/color.xml"
+                qualifiers="" >
+                <color name="counter_text_bg" >#626262
+                </color>
+                <color name="list_background_pressed" >#992416
+                </color>
+                <color name="list_background" >#303030
+                </color>
+                <color name="list_item_title" >#fff
+                </color>
+                <color name="list_divider" >#272727
+                </color>
+                <color name="counter_text_color" >#c5c4c4
+                </color>
+            </file>
+            <file
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -57,7 +133,7 @@
                 </dimen>
             </file>
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values\securhat_color.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/securhat_color.xml"
                 qualifiers="" >
                 <color name="blue" >#2BA6CB
                 </color>
@@ -69,7 +145,7 @@
                 </color>
             </file>
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values\securhat_style.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/securhat_style.xml"
                 qualifiers="" >
 
                 <style
@@ -118,7 +194,7 @@
                 </style>
             </file>
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values\strings.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/strings.xml"
                 qualifiers="" >
                 <string-array name="nav_drawer_items" >
                     <item>
@@ -177,13 +253,13 @@ What\'s Hot
                 </string>
             </file>
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values-sw720dp-land\dimens.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values-sw720dp-land/dimens.xml"
                 qualifiers="sw720dp-land-v13" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values-v11\styles.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values-v11/styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -194,7 +270,7 @@ What\'s Hot
                 </style>
             </file>
             <file
-                path="D:\androidStudio\securhat.com\app\src\main\res\values-v14\styles.xml"
+                path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values-v14/styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -204,6 +280,7 @@ What\'s Hot
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+<<<<<<< Updated upstream
             <file
                 name="ic_action_refresh"
                 path="D:\androidStudio\securhat.com\app\src\main\res\drawable-xxhdpi\ic_action_refresh.png"
@@ -300,12 +377,14 @@ What\'s Hot
                 path="D:\androidStudio\securhat.com\app\src\main\res\drawable-xhdpi\ic_action_new_event.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
+=======
+>>>>>>> Stashed changes
         </source>
-        <source path="D:\androidStudio\securhat.com\app\build\generated\res\rs\debug" />
-        <source path="D:\androidStudio\securhat.com\app\build\generated\res\generated\debug" />
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/build/generated/res/rs/debug" />
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/build/generated/res/generated/debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="D:\androidStudio\securhat.com\app\src\debug\res" />
+        <source path="/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/debug/res" />
     </dataSet>
 
 </merger>

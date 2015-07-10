@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <array name="nav_drawer_icons">
@@ -21,11 +21,11 @@
         <item>Pages</item>
         <item>What\'s Hot</item>
     </string-array>
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/securhat_color.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/securhat_color.xml -->
     <eat-comment />
 
     <color name="blue">#2BA6CB</color>
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/color.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/color.xml -->
     <eat-comment />
 
     <color name="counter_text_bg">#626262</color>
@@ -34,18 +34,18 @@
     <color name="list_background_pressed">#992416</color>
     <color name="list_divider">#272727</color>
     <color name="list_item_title">#fff</color>
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/securhat_color.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/securhat_color.xml -->
     <eat-comment />
 
     <color name="peach">#FF2D7A</color>
     <color name="white">#ffffff</color>
     <color name="yellow">#FEC701</color>
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="action_settings">Settings</string>
@@ -54,7 +54,7 @@
     <string name="drawer_close">Slider Menu Closed</string>
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="hello_world">Hello world!</string>
-    <!-- From: file:/D:/androidStudio/securhat.com/app/src/main/res/values/securhat_style.xml -->
+    <!-- From: file:/Users/mf/AndroidStudioProjects/Securhat-Android-app/app/src/main/res/values/securhat_style.xml -->
     <eat-comment />
 
     <style name="ActbarTitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
